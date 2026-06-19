@@ -10,6 +10,6 @@ def entropy_node(y):
 
     for key in keys:
         p = y.count(key)/len(y)
-        entropy += p*np.log2(p)
+        entropy -= p*np.log2(p)
         # print(p, key)
-    return float(-1*entropy)
+    return float(entropy)
